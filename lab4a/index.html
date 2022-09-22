@@ -77,18 +77,24 @@
         return;
       }
       // Part B
-      document.getElementById("tagline").value = "";
-      var ele = document.getElementsByName("color");
-      for (var i = 0; i < ele.length; i++) ele[i].checked = false;
-      // var ele = document.getElementsByName("size");
-      // for (var i = 0; i < ele.length; i++) ele[i].checked = false;
-      var ele = document.getElementsByName("sleeve");
-      for (var i = 0; i < ele.length; i++) ele[i].checked = false;
-      var ele = document.getElementsByName("address");
-      for (var i = 0; i < ele.length; i++) ele[i].checked = false;
-      var ele = document.getElementsByName("delivery_date");
-      for (var i = 0; i < ele.length; i++) ele[i].checked = false;
-
+    //   document.getElementById("tagline").value = "";
+    //   var ele = document.getElementsByName("color");
+    //   for (var i = 0; i < ele.length; i++) ele[i].checked = false;
+    //   var ele = document.getElementsByName("size");
+    //   for (var i = 0; i < ele.length; i++) ele[i].checked = true;
+    //   var ele = document.getElementsByName("sleeve");
+    //   for (var i = 0; i < ele.length; i++) ele[i].checked = false;
+    //   var ele = document.getElementsByName("address");
+    //   for (var i = 0; i < ele.length; i++) ele[i].checked = false;
+    //   var ele = document.getElementsByName("delivery_date");
+    //   for (var i = 0; i < ele.length; i++) ele[i].checked = false;
+    if (values[0].length > 10 || values[0].length < 3) {
+                alert(
+                    "Please enter a tagline containing between 3 and 10 characters"
+                );
+                return;
+            }
+    document.getElementById("size")
       const receipt_formatted = `Thank you for shopping!\nHere's your receipt:
       Date of Generation of Reciept: ${new Date().toLocaleDateString("UK")}
       Tagline: ${values[0]}
@@ -134,19 +140,19 @@
 <tr><td><label for="size" name="size"><b><u>Select Size of T Shirt : </u></b></label></td></tr>
 <tr for="size" name="size">
 <td>
-    <input type="checkbox" id = "XXL" name="size" for="size" value = "XXL">
+    <input type="checkbox" id = "XXL" class="checked" name="size" for="size" value = "XXL">
     <label for="size" name="size" value="XXL" >XXL</label><br>
 </td>
 <td>
-    <input type="checkbox" id = "XL" name="size" for="size" value = "XL">
+    <input type="checkbox" id = "XL" class="checked" name="size" for="size" value = "XL">
     <label for="size" name="size" value="XL">XL</label><br>
 </td>
 <td>
-    <input type="checkbox" id = "L" name="size" for="size" value = "L">
+    <input type="checkbox" id = "L" class="checked" name="size" for="size" value = "L">
     <label for="size" value="L" name="size" >L</label><br>
 </td>
 <td>
-    <input type="checkbox" id = "M" name="size" for="size" value = "M">
+    <input type="checkbox" id = "M" class="checked"  name="size" for="size" value = "M">
     <label for="size">M</label><br>
 </td>
 </tr>
