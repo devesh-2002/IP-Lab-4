@@ -8,20 +8,26 @@
             content="width=device-width,
 initial-scale=1.0"
         />
-        <title></title>
+        <title>IP EXP 4 Part 2</title>
     </head>
     <body>
         <h1>IP EXPERIMENT 4</h1>
         <h2>Part 2</h2>
-	<h3>Open Console for details</h3>
     </body>
     <script>
+        // Creating a Person Object
         const person1 = {
             name: "Devesh Rahatekar",
             class_name: "D15A",
             roll_no: 56,
+            details: () => {
+                console.log(`name: ${person1.name}`);
+                console.log(`class: ${person1.class_name}`);
+                console.log(`roll no: ${person1.roll_no}`);
+            },
         };
         console.log("Person 1: ", person1);
+        person1.details();
 
         class Person {
             constructor(name, class_name, roll_no) {
@@ -31,7 +37,17 @@ initial-scale=1.0"
             }
         }
 
-        const person2 = new Person("xyz", "D15A", 12);
+        const person2 = new Person("Sarvesh Limaye", "D15A", 36);
         console.log("Person 2: ", person2);
+
+        function Student(name, class_name, roll_no) {
+            this.name = name;
+            this.class_name = class_name;
+            this.roll_no = roll_no;
+        }
+
+        const person3 = new Student("Soham Kayal", "D15A", 28);
+        console.log(person3);
     </script>
 </html>
+Footer
